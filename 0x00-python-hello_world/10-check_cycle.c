@@ -10,14 +10,11 @@ int check_cycle(listint_t *list)
 	listint_t *head = list;
 	listint_t *indic;
 
-	while (head)
+	while (head>next)
 	{
 		head = head->next;
 		tmp = list;
 		indic = head->next;
-		if (indic == NULL)
-			return (0);
-
 		while (tmp != head)
 		{
 			if (indic == tmp)
