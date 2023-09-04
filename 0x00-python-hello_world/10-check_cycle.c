@@ -9,12 +9,23 @@ int check_cycle(listint_t *list)
 	listint_t *tmp;
 	listint_t *head = list;
 
-	tmp = list;
 	while (head)
 	{
-		if (head->next  == tmp)
-			return (1);
+		tmp = list;
 		head = head->next;
+		if (head  == tmp)
+		{
+			return (1);
+		}
+		else
+		{
+			while (tmp != head)
+			{
+				tmp = tmp->next;
+				if (head == tmp)
+					return (1);
+			}
+		}
 	}
 	return (0);
 }
