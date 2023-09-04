@@ -5,27 +5,15 @@
  * Return: 1 if the given listint_t is a cycle, 0 if there is no cycle
  */
 int check_cycle(listint_t *list)
-{
-	listint_t *tmp;
-	listint_t *head = list;
-	listint_t *indic;
+{	listint_t *slow = list;
+	listint_t *fast = list;
 
-	while (head->next)
+	while (slow != NULL || fast != NULL || fast->next != NULL)
 	{
-		head = head->next;
-		tmp = list;
-		indic = head->next;
-		if (indic == NULL)
-			return (0);
-		while (tmp != head)
-		{
-			if (indic == tmp)
-			{
-				return (1);
-			}
-			else
-				tmp = tmp->next;
-		}
+		slow = slow->next;
+		fast = fast->next->next;
+		if (fast == slow)
+			return (1);
 	}
 	return (0);
 }
