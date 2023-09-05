@@ -5,7 +5,8 @@
 /**
  * insert_node - insert a node into a sorted linked list
  * @head: a pointer to the pointer of the head of the list
- * @number: the number of the node that will be inserted 
+ * @number: the number of the node that will be inserted
+ * Return: a pointer to the inerted node
 */
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -15,7 +16,7 @@ listint_t *insert_node(listint_t **head, int number)
 
 	tmp = malloc(sizeof(listint_t));
 	if (tmp == NULL)
-		return (NULL); 
+		return (NULL);
 	tmp->n = number;
 	tmp->next = NULL;
 	if (point == NULL || (point->n > tmp->n))
@@ -27,13 +28,13 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	while (point->next)
 	{
-	   if (point->next->n > tmp->n)
-	   {
+		if (point->next->n > tmp->n)
+		{
 			hold = point->next;
 			point->next = tmp;
 			tmp->next = hold;
 			return (tmp);
-	   }
+		}
 		point = point->next;
 	}
 	point->next = tmp;
