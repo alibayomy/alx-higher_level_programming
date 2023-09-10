@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def no_c(my_string):
+    new_str = my_string
     str_lst = list(new_str)
     for l in str_lst:
         if "c" in str_lst:
