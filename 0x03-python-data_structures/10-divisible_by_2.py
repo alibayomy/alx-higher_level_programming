@@ -7,4 +7,4 @@ def divisible_by_2(my_list=[]):
             new_lst.append(True)
         else:
             new_lst.append(False)
-    return new_ls
+    return new_lst
