@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 def element_at(my_list, idx):
     n = len(my_list)
 
