@@ -4,7 +4,7 @@ def no_c(my_string):
     str_lst = list(new_str)
     if "c" in str_lst:
         str_lst.remove("c")
-    elif "C" in str_lst:
+    if "C" in str_lst:
         str_lst.remove("C")
     new_str = "".join(str_lst)
     return new_str
