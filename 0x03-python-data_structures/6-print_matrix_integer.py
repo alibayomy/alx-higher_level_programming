@@ -5,4 +5,4 @@ def print_matrix_integer(matrix=[[]]):
             print()
         for n in range(len(lst)):
             print("{:d}".format(lst[n]),
-                    end="\n" if n is len(lst) - 1 else " ")
+                  end="\n" if n is len(lst) - 1 else " ")
