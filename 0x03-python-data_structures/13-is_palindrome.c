@@ -10,8 +10,8 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *first;
 	listint_t *last;
-	int len = 0, distance, move, half;
-	
+	int len = 0, distance, move;
+
 	last = *head;
 	first = *head;
 	while (last)
@@ -22,8 +22,7 @@ int is_palindrome(listint_t **head)
 	distance = len;
 	last = *head;
 	distance--;
-	half = (len / 2) - 1;
-	while (distance > half)
+	while (distance > 0)
 	{
 		move = 0;
 		while (move < distance)
@@ -31,11 +30,12 @@ int is_palindrome(listint_t **head)
 			move++;
 			last = last->next;
 		}
+		printf("the first: %d, the second: %d\n", first->n, last->n);
 		if (first->n == last->n)
 		{
 			first = first->next;
 			last = first;
-			distance = distance - 1;
+			distance = distance - 2;
 		}
 		else
 			return (0);
