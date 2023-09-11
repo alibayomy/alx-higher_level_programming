@@ -9,28 +9,35 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *first;
-	int i, index = 0, len;
-	char nodes[20];
-	char reversed[20];
-
+	listint_t *last;
+	int len = 0, distance, move, half;
+	
+	last = *head;
 	first = *head;
-	for (i = 0; first != NULL; i++)
+	while (last)
 	{
-		nodes[i] = first->n;
-		first = first->next;
+		len++;
+		last = last->next;
 	}
-	i--;
-	len = i;
-	while (i >= 0)
+	distance = len;
+	last = *head;
+	distance--;
+	half = (len / 2) - 1;
+	while (distance > half)
 	{
-		reversed[index] = nodes[i];
-		index++;
-		i--;
-	}
-
-	for (i = 0; i <= len; i++)
-	{
-		if (nodes[i] != reversed[i])
+		move = 0;
+		while (move < distance)
+		{
+			move++;
+			last = last->next;
+		}
+		if (first->n == last->n)
+		{
+			first = first->next;
+			last = first;
+			distance = distance - 1;
+		}
+		else
 			return (0);
 	}
 	return (1);
