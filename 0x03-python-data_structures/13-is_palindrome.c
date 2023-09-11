@@ -30,7 +30,6 @@ int is_palindrome(listint_t **head)
 			move++;
 			last = last->next;
 		}
-		printf("the first: %d, the second: %d\n", first->n, last->n);
 		if (first->n == last->n)
 		{
 			first = first->next;
