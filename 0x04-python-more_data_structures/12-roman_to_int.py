@@ -5,5 +5,10 @@ def roman_to_int(roman_string):
         dic = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
         str_lst = list(roman_string)
         for i in str_lst:
-            value = dic[i] + value
-        return value 
+            if i in dic:
+                value = dic[i] + value
+            else:
+                return 0
+        return value
+    else:
+        return 0
