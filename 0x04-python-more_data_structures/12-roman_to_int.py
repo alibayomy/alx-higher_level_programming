@@ -7,6 +7,8 @@ def roman_to_int(roman_string):
         for i in str_lst:
             if i in dic:
                 value = dic[i] + value
+        if "IV" in roman_string or "IX" in roman_string:
+            value = value - 2
         return value
     else:
         return 0
