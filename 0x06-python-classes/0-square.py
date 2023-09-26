@@ -2,6 +2,6 @@
 """Defining a Square class"""
 
 
-class Sqaure:
+class Square:
     """ my own defined class sqaure"""
     pass
