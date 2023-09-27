@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """Creating a linked list with python classes"""
 class Node:
     """Defining a node of a singly linked list"""
@@ -50,9 +52,9 @@ class SinglyLinkedList:
         new = Node(value)
         if self.__head is None:
             self.__head = new
-            new.node_next = None
+            new.next_node = None
         elif (self.__head.data > value):
-            new.node_next = self.__head
+            new.next_node = self.__head
             self.__head = new
         else:
             tmp = self.__head
