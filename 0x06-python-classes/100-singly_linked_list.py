@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
-
 """Creating a linked list with python classes"""
+
+
 class Node:
     """Defining a node of a singly linked list"""
     def __init__(self, data, next_node=None):
@@ -25,7 +25,7 @@ class Node:
         if isinstance(value, int):
             self.__data = value
         else:
-            raise TypeError("data must be integer")
+            raise TypeError("data must be an integer")
 
     @property
     def next_node(self):
