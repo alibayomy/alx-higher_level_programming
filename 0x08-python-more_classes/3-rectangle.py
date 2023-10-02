@@ -48,11 +48,11 @@ class Rectangle:
 
     def __str__(self):
         """The string representation of an instance of the Rectangle class"""
-        if (self.width == 0 or self.height == 0):
-            return ""
-        else:
+        string = ""
+        if not (self.width == 0 or self.height == 0):
             for i in range(self.height):
                 for x in range(self.width):
-                    print("#", end="")
-                print()
-        return ""
+                    string = string + "#"
+                if i != self.height - 1:
+                    string = string + "\n"
+        return string
