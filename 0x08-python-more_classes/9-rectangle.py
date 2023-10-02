@@ -79,9 +79,9 @@ class Rectangle:
         return rect_2
 
     @classmethod
-    """initiate a new square.
-    Args:
-    size: the size of the square.
-    """
     def square(cls, size=0):
+        '''Initiate a new square.
+        Args:
+        Size: the size of the square
+        '''
         return cls(size, size)
