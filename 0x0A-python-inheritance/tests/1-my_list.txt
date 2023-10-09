@@ -29,3 +29,11 @@ Case 2 :
 >>> print(my_list)
 [-1, 4, 2, 3, -5]
 
+Case 3:
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
+[]
