@@ -7,9 +7,9 @@ class MyInt(int):
     def __eq__(self, value):
         if self.real == value:
             return False
-        True
+        return True
 
     def __ne__(self, value):
         if self.real != value:
             return False
-        True
+        return True
