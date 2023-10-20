@@ -71,6 +71,7 @@ class Rectangle(Base):
         self.__y = value
 
     def validate_int(self, name, value):
+        """check if the given value is validated"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if name == "width" or name == "height":
