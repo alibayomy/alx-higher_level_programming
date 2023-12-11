@@ -3,7 +3,7 @@ const [,, ...args] = process.argv;
 if (args[0] === undefined) {
   console.log('0');
 } else {
-  const Numargs = args.map((arg) => Number(arg));
-  const max = Math.max(...Numargs);
-  console.log(max);
+  let Numargs = args.map((arg) => Number(arg));
+  Numargs = Numargs.sort((a, b) => b - a);
+  console.log(Numargs[1]);
 }
