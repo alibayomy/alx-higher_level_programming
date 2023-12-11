@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const [,, ...args] = process.argv;
-if (args[0] === undefined) {
+if (args[0] === undefined || args[1] === undefined) {
   console.log('0');
 } else {
   let Numargs = args.map((arg) => Number(arg));
