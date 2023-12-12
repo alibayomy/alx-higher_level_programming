@@ -2,7 +2,7 @@
 class Rectangle {
   constructor (w, h) {
     this.width = w;
-    this.heigh = h;
+    this.height = h;
   }
 }
 module.exports = Rectangle;
