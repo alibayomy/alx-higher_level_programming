@@ -12,5 +12,5 @@ if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     myAuth = HTTPBasicAuth(username, password)
-    myReq = requests.get("https://api.github.com/user", myAuth)
+    myReq = requests.get("https://api.github.com/user", auth=myAuth)
     print(myReq.json().get("id"))
