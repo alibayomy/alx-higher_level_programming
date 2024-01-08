@@ -16,7 +16,7 @@ if __name__ == '__main__':
     try:
         response = req.json()
         if(response != {}):
-            print("{} {}".format(req.get("id"), req.get("name")))
+            print("{} {}".format(req.get("id"), respnse.get("name")))
         else:
             print("No result")
     except ValueError:
