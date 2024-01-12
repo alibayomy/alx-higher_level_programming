@@ -7,12 +7,13 @@
 
 import sys
 import requests
-if __name__ == '__main__':
-    if sys.argv[1] == 0:
-        values = {'q': ""}
-    else:
-        values = {'q': sys.argv[1]}
-    req = requests.post("http://0.0.0.0:5000/search_user", values)
+
+
+if __name__ == "__main__":
+    myLetter = "" if len(sys.argv) == 1 else sys.argv[1]
+    subD = {"q": myLetter}
+
+    r = requests.post("http://0.0.0.0:5000/search_user", data=subD)
     try:
         response = r.json()
         if response == {}:
